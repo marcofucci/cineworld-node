@@ -12,9 +12,16 @@
     "url" : "http://github.com/marcofucci/cineworld-node/issues"
   },
   "engine": [ "node >=0.8.10" ],
-  "main": "./lib/cineworld-node",
+  "main": "./lib/cineworld",
   "dependencies": {
     "request":"~2.11.4"
   },
-  "bundleDependencies": ["request"]
+  "devDependencies": {
+    "mocha": "*",
+    "gently": "*"
+  },
+  "bundleDependencies": ["request"],
+  "scripts": {
+    "test": "node_modules/.bin/mocha tests/*.js"
+  }
 }
