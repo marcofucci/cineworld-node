@@ -2,7 +2,7 @@
   "name": "cineworld-node",
   "description": "node.js API for Cineworld",
   "tags" : ["cineworld"],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author" : "Marco Fucci <info@marcofucci.com>",
   "repository": {
     "type": "git",
