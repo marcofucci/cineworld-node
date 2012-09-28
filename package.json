@@ -1,0 +1,20 @@
+{
+  "name": "cineworld-node",
+  "description": "node.js API for Cineworld",
+  "tags" : ["cineworld"],
+  "version": "0.1.0",
+  "author" : "Marco Fucci <info@marcofucci.com>",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/marcofucci/cineworld-node.git"
+  },
+  "bugs" : {
+    "url" : "http://github.com/marcofucci/cineworld-node/issues"
+  },
+  "engine": [ "node >=0.8.10" ],
+  "main": "./lib/cineworld-node",
+  "dependencies": {
+    "request":"~2.11.4"
+  },
+  "bundleDependencies": ["request"]
+}
