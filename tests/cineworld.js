@@ -21,8 +21,8 @@ describe('request API call', function() {
     });
 
     it('makes get request with params properly set', function() {
-      gently.expect(gently.hijacked.request, 'get', function(options, callback) {
-        assert.equal(options.url, 'http://www.cineworld.com/api/my-url');
+      gently.expect(gently.hijacked.request, 'get', function(url, options, callback) {
+        assert.equal(url, 'http://www.cineworld.com/api/my-url');
         assert.equal(options.qs.key, CINEWORLD_KEY);
         assert.equal(options.json, true);
         
@@ -33,8 +33,8 @@ describe('request API call', function() {
     });
 
     it('makes get request with query string', function() {
-      gently.expect(gently.hijacked.request, 'get', function(options, callback) {
-        assert.equal(options.url, 'http://www.cineworld.com/api/my-url');
+      gently.expect(gently.hijacked.request, 'get', function(url, options, callback) {
+        assert.equal(url, 'http://www.cineworld.com/api/my-url');
         assert.equal(options.qs.key, CINEWORLD_KEY);
         assert.equal(options.qs.full, true);
         assert.equal(options.json, true);
@@ -68,8 +68,8 @@ describe('other API call', function() {
           }
         ]
       };
-      gently.expect(gently.hijacked.request, 'get', function(options, callback) {
-        assert.equal(options.url, 'http://www.cineworld.com/api/quickbook/cinemas');
+      gently.expect(gently.hijacked.request, 'get', function(url, options, callback) {
+        assert.equal(url, 'http://www.cineworld.com/api/quickbook/cinemas');
         callback(null, null, jsonRes);
       });
 
@@ -95,8 +95,8 @@ describe('other API call', function() {
           }
         ]
       };
-      gently.expect(gently.hijacked.request, 'get', function(options, callback) {
-        assert.equal(options.url, 'http://www.cineworld.com/api/quickbook/films');
+      gently.expect(gently.hijacked.request, 'get', function(url, options, callback) {
+        assert.equal(url, 'http://www.cineworld.com/api/quickbook/films');
         callback(null, null, jsonRes);
       });
 
@@ -117,8 +117,8 @@ describe('other API call', function() {
           "20121004"
         ]
       };
-      gently.expect(gently.hijacked.request, 'get', function(options, callback) {
-        assert.equal(options.url, 'http://www.cineworld.com/api/quickbook/dates');
+      gently.expect(gently.hijacked.request, 'get', function(url, options, callback) {
+        assert.equal(url, 'http://www.cineworld.com/api/quickbook/dates');
         callback(null, null, jsonRes);
       });
 
@@ -174,8 +174,8 @@ describe('other API call', function() {
             }
         ]
       };
-      gently.expect(gently.hijacked.request, 'get', function(options, callback) {
-        assert.equal(options.url, 'http://www.cineworld.com/api/quickbook/performances');
+      gently.expect(gently.hijacked.request, 'get', function(url, options, callback) {
+        assert.equal(url, 'http://www.cineworld.com/api/quickbook/performances');
         callback(null, null, jsonRes);
       });
 
@@ -201,8 +201,8 @@ describe('other API call', function() {
             }
         ]
       };
-      gently.expect(gently.hijacked.request, 'get', function(options, callback) {
-        assert.equal(options.url, 'http://www.cineworld.com/api/categories');
+      gently.expect(gently.hijacked.request, 'get', function(url, options, callback) {
+        assert.equal(url, 'http://www.cineworld.com/api/categories');
         callback(null, null, jsonRes);
       });
 
@@ -252,8 +252,8 @@ describe('other API call', function() {
             }
         ]
       };
-      gently.expect(gently.hijacked.request, 'get', function(options, callback) {
-        assert.equal(options.url, 'http://www.cineworld.com/api/events');
+      gently.expect(gently.hijacked.request, 'get', function(url, options, callback) {
+        assert.equal(url, 'http://www.cineworld.com/api/events');
         callback(null, null, jsonRes);
       });
 
@@ -275,8 +275,8 @@ describe('other API call', function() {
             }
         ]
       };
-      gently.expect(gently.hijacked.request, 'get', function(options, callback) {
-        assert.equal(options.url, 'http://www.cineworld.com/api/distributors');
+      gently.expect(gently.hijacked.request, 'get', function(url, options, callback) {
+        assert.equal(url, 'http://www.cineworld.com/api/distributors');
         callback(null, null, jsonRes);
       });
 

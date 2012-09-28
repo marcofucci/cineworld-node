@@ -16,7 +16,7 @@ Or from source
 
 ## Usage
 
-    var Cineworld = require('cineworld');
+    var Cineworld = require('cineworld-node');
     var cw = new Cineworld('my-key');
 
     //cinemas
